@@ -1,8 +1,22 @@
-from selenium import webdriver
-import time
+# from selenium import webdriver
 
-url = 'https://entertain.naver.com/ranking/comment/list?oid=022&aid=0003409199'
+# import chromedriver_autoinstaller
 
-#웹 드라이버
-driver = webdriver.Chrome()
-driver.get('https://blog.naver.com/go4693')x
+# path = chromedriver_autoinstaller.install()
+# driver = webdriver.Chrome(path)
+
+# driver.get('https://movie.daum.net/moviedb/grade?movieId=147615')
+
+# print(driver.page_source)
+import requests
+
+url = "https://comment.daum.net/apis/v1/posts/147615/comments"
+
+r = requests.get(url)
+print(r.text)
+
+
+
+
+
+
